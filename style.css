@@ -1,0 +1,53 @@
+* {
+  margin: 10;
+  padding: 10;
+}
+
+body {
+  background-color: tan;
+}
+
+/*
+  GRAD
+  XOPQ //X-Strichstärke
+  XTRA
+  YOPQ //X-Strichstärke
+  YTAS
+  YTDE
+  YTFI
+  YTLC
+  YTUC
+  opsz
+  slnt
+  wdth
+  wght
+*/
+
+h1 {
+  font-family: Roboto;
+  font-variation-settings: "slnt" -10, "wght" 100, "YTAS" 0; /* Neigen um 10 Grad nach rechts */
+  transition: all 0.5s ease;
+}
+
+h1:hover {
+  font-variation-settings: "slnt" 0, "wght" 400, "YTAS" 900; /* Neigen um 10 Grad nach rechts */
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(Roboto.ttf);
+}
+
+#myCanvas {
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  pointer-events: none;
+  margin: auto;
+}
+
+#myCanvas > *::selection {
+  background-color: none; /* Ändern Sie die Hintergrundfarbe des Text-Highlights */
+  pointer-events: none;
+}
